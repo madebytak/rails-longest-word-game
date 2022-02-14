@@ -15,7 +15,7 @@ class GamesController < ApplicationController
     end
   end
 
-  def english_check(word)
+  def valid_word(word)
     url = "https://wagon-dictionary.herokuapp.com/#{answer}"
     word_check = URI.open(url).read
     word = JSON.parse(word_check)
